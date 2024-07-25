@@ -1,10 +1,12 @@
-package aFinal;
+package Conexion;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
+		Conexion objetoConexion= new Conexion();
+		objetoConexion.establecerConexion();
 	}
 
 }
