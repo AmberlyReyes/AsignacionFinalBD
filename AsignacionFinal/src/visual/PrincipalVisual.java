@@ -9,6 +9,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Font;
 import javax.swing.JMenuBar;
 import java.awt.Color;
+import javax.swing.JMenuItem;
+import javax.swing.JMenu;
 
 public class PrincipalVisual extends JFrame {
 
@@ -44,6 +46,15 @@ public class PrincipalVisual extends JFrame {
 		menuBar.setForeground(Color.WHITE);
 		menuBar.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		setJMenuBar(menuBar);
+		
+		JMenu mnAsignar = new JMenu("Inscribir Grupo");
+		mnAsignar.setFont(new Font("Segoe UI", Font.BOLD, 15));
+		mnAsignar.setForeground(new Color(0, 153, 255));
+		menuBar.add(mnAsignar);
+		
+		JMenuItem mntInscribe = new JMenuItem("Inscribir Estudiante");
+		mntInscribe.setForeground(new Color(0, 51, 0));
+		mnAsignar.add(mntInscribe);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
