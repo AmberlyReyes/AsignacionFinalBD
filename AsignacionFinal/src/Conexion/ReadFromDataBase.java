@@ -8,10 +8,10 @@ import java.sql.Statement;
 public class ReadFromDataBase {
     public static void main(String[] args) {
         try {
-            Connection connection = Conexion.getConnection();
+            Connection conecion = conection
             String query = "SELECT IdEstudiante, Nombre, Apellido FROM Estudiante";
 
-            Statement statement = connection.createStatement();
+            Statement statement = conecion.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
