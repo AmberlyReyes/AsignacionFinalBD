@@ -4,12 +4,10 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
-import javax.swing.table.DefaultTableModel;
 
 import Conexion.Conexion;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 import Logico.*;
 

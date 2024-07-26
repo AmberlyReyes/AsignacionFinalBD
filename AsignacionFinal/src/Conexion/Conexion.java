@@ -35,7 +35,7 @@ public class Conexion {
 	}
 
 		
-		public ArrayList<Estudiante> obtenerEstudiantes() {
+	public ArrayList<Estudiante> obtenerEstudiantes() {
 	        ArrayList<Estudiante> estudiantes = new ArrayList<>();
 	        String query = "SELECT * FROM Estudiante";
 	        try (PreparedStatement stmt = cn.prepareStatement(query);

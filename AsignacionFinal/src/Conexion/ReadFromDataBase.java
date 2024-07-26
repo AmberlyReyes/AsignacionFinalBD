@@ -16,13 +16,14 @@ public class ReadFromDataBase {
 
             while (resultSet.next()) {
                 // Usar los nombres correctos de las columnas
-                String id = resultSet.getString("IdEstudiante");
-                String name = resultSet.getString("Nombre");
-                String lastname = resultSet.getString("Apellido");
+                //String id = resultSet.getString("IdEstudiante");
+                //String name = resultSet.getString("Nombre");
+                //String lastname = resultSet.getString("Apellido");
 
-                System.out.println("ID: " + id);
-                System.out.println("Nombre: " + name);
-                System.out.println("Apellido: " + lastname);
+                //System.out.println("ID: " + id);
+                //System.out.println("Nombre: " + name);
+                //System.out.println("Apellido: " + lastname);
+            	System.out.println(resultSet.getString("IdEstudiante"));
             }
 
             resultSet.close();
