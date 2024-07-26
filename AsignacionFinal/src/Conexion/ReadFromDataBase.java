@@ -8,21 +8,21 @@ import java.sql.Statement;
 public class ReadFromDataBase {
     public static void main(String[] args) {
         try {
-            Connection conecion = conection
+            Connection connection = Conexion.getConnection(); // Asume que tienes una clase Conexion con este método
             String query = "SELECT IdEstudiante, Nombre, Apellido FROM Estudiante";
 
-            Statement statement = conecion.createStatement();
+            Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
-                // Suponiendo que la tabla tiene columnas 'id', 'name', 'email'
-                String id = resultSet.getString("id");
-                String name = resultSet.getString("name");
-                String lastname = resultSet.getString("lastname");
+                // Usar los nombres correctos de las columnas
+                String id = resultSet.getString("IdEstudiante");
+                String name = resultSet.getString("Nombre");
+                String lastname = resultSet.getString("Apellido");
 
                 System.out.println("ID: " + id);
-                System.out.println("Name: " + name);
-                System.out.println("Email: " + lastname);
+                System.out.println("Nombre: " + name);
+                System.out.println("Apellido: " + lastname);
             }
 
             resultSet.close();
@@ -33,3 +33,8 @@ public class ReadFromDataBase {
         }
     }
 }
+
+
+
+
+
